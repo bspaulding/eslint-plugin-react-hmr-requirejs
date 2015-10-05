@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-react-hmr-requirejs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A set of eslint rules to go along with react-hmr-requirejs",
   "keywords": [
     "eslint",
