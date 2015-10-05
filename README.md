@@ -43,7 +43,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-```json
+```javascript
 {
   // Disallow invoking the react-hmr plugin
   // Use this to ensure the plugin is not used in production builds.
