@@ -23,16 +23,16 @@ var ruleTester = new RuleTester();
 ruleTester.run("no-react-hmr", rule, {
 
     valid: [
-
-        // give me some code that won't trigger a warning
+        "var MyComponent = require(\"require-jsx/jsx!./components/my_component\");",
+        "var MyComponent = require(\"es6!./components/my_component\");",
+        "var MyComponent = require(\"babel!./components/my_component\");"
     ],
 
     invalid: [
         {
-            code: "var MyComponent = require("react-hmr!./components/my_component");",
+            code: "var MyComponent = require(\"react-hmr!./components/my_component\");",
             errors: [{
-                message: "Fill me in.",
-                type: "Me too"
+                message: "Uses of the react-hmr should not be committed. Use this plugin in development only.",
             }]
         }
     ]
